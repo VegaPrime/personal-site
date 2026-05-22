@@ -1,3 +1,4 @@
+import MatrixRain from '@/components/MatrixRain'
 import { buttonVariants } from '@/components/ui/button'
 
 export default function Hero() {
@@ -6,6 +7,7 @@ export default function Hero() {
       id="hero"
       className="relative overflow-hidden px-6 py-28 md:py-40"
     >
+      <MatrixRain />
       <div className="relative mx-auto max-w-5xl">
 
         {/* Line 1: $ whoami — cursor blinks forever */}
