@@ -1,9 +1,8 @@
 'use client'
 
-import { useTheme } from 'next-themes'
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet'
-import { Button, buttonVariants } from '@/components/ui/button'
-import { Menu, Sun, Moon } from 'lucide-react'
+import { buttonVariants } from '@/components/ui/button'
+import { Menu } from 'lucide-react'
 import { cn } from '@/lib/utils'
 
 const links = [
@@ -14,8 +13,6 @@ const links = [
 ]
 
 export default function Nav() {
-  const { theme, setTheme } = useTheme()
-
   return (
     <nav className="sticky top-0 z-50 w-full border-b border-border bg-background/80 backdrop-blur-md">
       <div className="mx-auto flex h-14 max-w-5xl items-center justify-between px-6">
@@ -32,28 +29,10 @@ export default function Nav() {
               {link.label}
             </a>
           ))}
-          <Button
-            variant="ghost"
-            size="icon"
-            aria-label="Toggle theme"
-            onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-          >
-            <Sun className="h-4 w-4 rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
-            <Moon className="absolute h-4 w-4 rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
-          </Button>
         </div>
 
         {/* Mobile: Sheet */}
         <div className="flex items-center gap-2 md:hidden">
-          <Button
-            variant="ghost"
-            size="icon"
-            aria-label="Toggle theme"
-            onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-          >
-            <Sun className="h-4 w-4 rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
-            <Moon className="absolute h-4 w-4 rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
-          </Button>
           <Sheet>
             <SheetTrigger
               className={cn(buttonVariants({ variant: 'ghost', size: 'icon' }))}
