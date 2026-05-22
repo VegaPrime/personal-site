@@ -5,7 +5,7 @@ import { useInView } from '@/hooks/useInView'
 jest.mock('@/hooks/useInView')
 const mockUseInView = useInView as jest.MockedFunction<typeof useInView>
 
-const stubRef = { current: null } as React.RefObject<HTMLDivElement>
+const stubRef = { current: null } as React.RefObject<HTMLDivElement | null>
 
 describe('FadeIn', () => {
   it('renders children', () => {
