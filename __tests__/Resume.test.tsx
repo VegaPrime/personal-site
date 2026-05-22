@@ -23,12 +23,6 @@ jest.mock('@/data/resume', () => ({
 }))
 
 describe('Resume', () => {
-  it('renders the PDF iframe', () => {
-    render(<Resume />)
-    const iframe = document.querySelector('iframe')
-    expect(iframe).toHaveAttribute('src', '/resume.pdf')
-  })
-
   it('renders the PDF download button', () => {
     render(<Resume />)
     const link = screen.getByRole('link', { name: /download pdf/i })

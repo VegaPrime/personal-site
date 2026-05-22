@@ -22,12 +22,6 @@ export default function Resume() {
             )}
           </div>
 
-          <iframe
-            src="/resume.pdf"
-            className="mb-12 h-150 w-full rounded-lg border border-border"
-            title="Resume PDF"
-          />
-
           <h3 className="mb-6 text-lg font-semibold">Experience</h3>
           <div className="space-y-8">
             {resume.experience.map((exp, i) => (
