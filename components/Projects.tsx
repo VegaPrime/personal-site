@@ -20,10 +20,15 @@ export default function Projects() {
           <div className="mb-6 grid gap-6 md:grid-cols-2">
             {featured.map((project, index) => (
               <FadeIn key={project.title} delay={index * 100}>
-                <Card className="border-primary/20 bg-card/50 backdrop-blur-sm transition-transform duration-200 hover:-translate-y-1 hover:shadow-lg hover:shadow-primary/10">
+                <Card className="glitch-card border-primary/20 bg-card/50 backdrop-blur-sm transition-transform duration-200 hover:-translate-y-1 hover:shadow-lg hover:shadow-primary/10">
                   <CardHeader>
                     <CardTitle className="font-mono text-sm text-primary">
-                      ■ {project.title}
+                      <span
+                        className="glitch-title"
+                        data-text={`■ ${project.title}`}
+                      >
+                        ■ {project.title}
+                      </span>
                     </CardTitle>
                     <CardDescription>{project.description}</CardDescription>
                   </CardHeader>
@@ -67,10 +72,15 @@ export default function Projects() {
             <div className="grid gap-4 md:grid-cols-3">
               {rest.map((project, index) => (
                 <FadeIn key={project.title} delay={index * 80}>
-                  <Card className="bg-card/30 transition-transform duration-200 hover:-translate-y-1 hover:shadow-lg hover:shadow-primary/10">
+                  <Card className="glitch-card bg-card/30 transition-transform duration-200 hover:-translate-y-1 hover:shadow-lg hover:shadow-primary/10">
                     <CardHeader className="pb-2">
                       <CardTitle className="font-mono text-xs text-primary">
-                        ■ {project.title}
+                        <span
+                          className="glitch-title"
+                          data-text={`■ ${project.title}`}
+                        >
+                          ■ {project.title}
+                        </span>
                       </CardTitle>
                       <CardDescription className="text-xs">{project.description}</CardDescription>
                     </CardHeader>
