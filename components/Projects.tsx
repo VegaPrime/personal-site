@@ -1,8 +1,9 @@
 import { projects } from '@/data/projects'
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
-import { Button } from '@/components/ui/button'
+import { buttonVariants } from '@/components/ui/button'
 import { GitFork, ExternalLink } from 'lucide-react'
+import { cn } from '@/lib/utils'
 
 export default function Projects() {
   const featured = projects.filter((p) => p.featured)
@@ -14,7 +15,6 @@ export default function Projects() {
         <p className="mb-6 font-mono text-xs text-primary">## ./projects</p>
         <h2 className="mb-10 text-2xl font-bold">Projects</h2>
 
-        {/* Featured */}
         <div className="mb-6 grid gap-6 md:grid-cols-2">
           {featured.map((project) => (
             <Card key={project.title} className="border-primary/20 bg-card/50 backdrop-blur-sm">
@@ -34,18 +34,24 @@ export default function Projects() {
                 </div>
                 <div className="flex gap-2">
                   {project.github && (
-                    <Button variant="ghost" size="sm" asChild>
-                      <a href={project.github} target="_blank" rel="noopener noreferrer">
-                        <GitFork className="mr-1 h-3 w-3" /> GitHub
-                      </a>
-                    </Button>
+                    <a
+                      href={project.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={cn(buttonVariants({ variant: 'ghost', size: 'sm' }))}
+                    >
+                      <GitFork className="mr-1 h-3 w-3" /> GitHub
+                    </a>
                   )}
                   {project.live && (
-                    <Button variant="ghost" size="sm" asChild>
-                      <a href={project.live} target="_blank" rel="noopener noreferrer">
-                        <ExternalLink className="mr-1 h-3 w-3" /> Live
-                      </a>
-                    </Button>
+                    <a
+                      href={project.live}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={cn(buttonVariants({ variant: 'ghost', size: 'sm' }))}
+                    >
+                      <ExternalLink className="mr-1 h-3 w-3" /> Live
+                    </a>
                   )}
                 </div>
               </CardContent>
@@ -53,7 +59,6 @@ export default function Projects() {
           ))}
         </div>
 
-        {/* Non-featured */}
         {rest.length > 0 && (
           <div className="grid gap-4 md:grid-cols-3">
             {rest.map((project) => (
@@ -73,11 +78,14 @@ export default function Projects() {
                     ))}
                   </div>
                   {project.github && (
-                    <Button variant="ghost" size="sm" className="mt-2 px-0" asChild>
-                      <a href={project.github} target="_blank" rel="noopener noreferrer">
-                        <GitFork className="mr-1 h-3 w-3" /> GitHub
-                      </a>
-                    </Button>
+                    <a
+                      href={project.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={cn(buttonVariants({ variant: 'ghost', size: 'sm' }), 'mt-2 px-0')}
+                    >
+                      <GitFork className="mr-1 h-3 w-3" /> GitHub
+                    </a>
                   )}
                 </CardContent>
               </Card>

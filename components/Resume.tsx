@@ -1,5 +1,5 @@
 import { resume } from '@/data/resume'
-import { Button } from '@/components/ui/button'
+import { buttonVariants } from '@/components/ui/button'
 import { Separator } from '@/components/ui/separator'
 import { Download } from 'lucide-react'
 
@@ -10,17 +10,13 @@ export default function Resume() {
         <p className="mb-6 font-mono text-xs text-primary">## ./resume</p>
         <div className="mb-6 flex flex-wrap items-center gap-3">
           <h2 className="text-2xl font-bold">Resume</h2>
-          <Button size="sm" asChild>
-            <a href="/resume.pdf" download>
-              <Download className="mr-1 h-3 w-3" /> Download PDF
-            </a>
-          </Button>
+          <a href="/resume.pdf" download className={buttonVariants({ size: 'sm' })}>
+            <Download className="mr-1 h-3 w-3" /> Download PDF
+          </a>
           {resume.hasDocx && (
-            <Button size="sm" variant="outline" asChild>
-              <a href="/resume.docx" download>
-                <Download className="mr-1 h-3 w-3" /> Download Word
-              </a>
-            </Button>
+            <a href="/resume.docx" download className={buttonVariants({ variant: 'outline', size: 'sm' })}>
+              <Download className="mr-1 h-3 w-3" /> Download Word
+            </a>
           )}
         </div>
 

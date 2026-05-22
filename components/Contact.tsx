@@ -1,5 +1,6 @@
-import { Button } from '@/components/ui/button'
+import { buttonVariants } from '@/components/ui/button'
 import { Mail, GitFork, Link } from 'lucide-react'
+import { cn } from '@/lib/utils'
 
 export default function Contact() {
   return (
@@ -12,31 +13,27 @@ export default function Contact() {
           always open.
         </p>
         <div className="flex flex-wrap gap-3">
-          <Button asChild>
-            <a href="mailto:you@example.com" aria-label="Email">
-              <Mail className="mr-2 h-4 w-4" /> Email me
-            </a>
-          </Button>
-          <Button variant="outline" asChild>
-            <a
-              href="https://github.com/username"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="GitHub"
-            >
-              <GitFork className="mr-2 h-4 w-4" /> GitHub
-            </a>
-          </Button>
-          <Button variant="outline" asChild>
-            <a
-              href="https://linkedin.com/in/username"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="LinkedIn"
-            >
-              <Link className="mr-2 h-4 w-4" /> LinkedIn
-            </a>
-          </Button>
+          <a href="mailto:you@example.com" aria-label="Email" className={buttonVariants()}>
+            <Mail className="mr-2 h-4 w-4" /> Email me
+          </a>
+          <a
+            href="https://github.com/username"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="GitHub"
+            className={cn(buttonVariants({ variant: 'outline' }))}
+          >
+            <GitFork className="mr-2 h-4 w-4" /> GitHub
+          </a>
+          <a
+            href="https://linkedin.com/in/username"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LinkedIn"
+            className={cn(buttonVariants({ variant: 'outline' }))}
+          >
+            <Link className="mr-2 h-4 w-4" /> LinkedIn
+          </a>
         </div>
       </div>
     </section>

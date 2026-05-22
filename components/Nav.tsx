@@ -2,8 +2,9 @@
 
 import { useTheme } from 'next-themes'
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet'
-import { Button } from '@/components/ui/button'
+import { Button, buttonVariants } from '@/components/ui/button'
 import { Menu, Sun, Moon } from 'lucide-react'
+import { cn } from '@/lib/utils'
 
 const links = [
   { label: './about', href: '#about' },
@@ -54,10 +55,11 @@ export default function Nav() {
             <Moon className="absolute h-4 w-4 rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
           </Button>
           <Sheet>
-            <SheetTrigger asChild>
-              <Button variant="ghost" size="icon" aria-label="Open menu">
-                <Menu className="h-4 w-4" />
-              </Button>
+            <SheetTrigger
+              className={cn(buttonVariants({ variant: 'ghost', size: 'icon' }))}
+              aria-label="Open menu"
+            >
+              <Menu className="h-4 w-4" />
             </SheetTrigger>
             <SheetContent side="right" className="w-56">
               <div className="mt-8 flex flex-col gap-4">
