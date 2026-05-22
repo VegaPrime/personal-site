@@ -17,7 +17,7 @@ export default function Hero() {
         </div>
 
         {/* Line 2: name — cursor disappears after typing */}
-        <div className="mb-3 flex items-baseline text-4xl font-black leading-tight tracking-tight md:text-6xl">
+        <div className="mb-3 flex items-baseline text-2xl font-black leading-tight tracking-tight sm:text-4xl md:text-6xl">
           <span className="hero-typewriter-name">
             Hi, I&apos;m{' '}
             <span className="text-primary">David Templeton</span>.
