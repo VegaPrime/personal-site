@@ -13,7 +13,7 @@ export default function Hero() {
         <p className="mb-3 font-mono text-sm text-primary">$ whoami</p>
         <h1 className="mb-3 text-4xl font-black leading-tight tracking-tight md:text-6xl">
           Hi, I&apos;m{' '}
-          <span className="text-primary">Your Name</span>.
+          <span className="text-primary">David Templeton</span>.
         </h1>
         <p className="mb-8 font-mono text-sm text-muted-foreground md:text-base">
           Full-Stack Engineer &amp; UI Craftsman

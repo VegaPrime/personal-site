@@ -15,14 +15,17 @@ export default function About() {
           <div>
             <h2 className="mb-4 text-2xl font-bold">About me</h2>
             <p className="leading-relaxed text-muted-foreground">
-              I&apos;m a full-stack engineer with 5+ years of experience building
-              scalable web applications. I care deeply about clean architecture,
-              fast user interfaces, and developer tooling that doesn&apos;t get
-              in the way.
+              Senior Frontend Engineer with 8+ years building high-traffic,
+              customer-facing web applications using React, Next.js, TypeScript,
+              and Node. Experienced delivering enterprise and ecommerce platforms
+              including Home Depot, NCR, Deloitte, and Honeywell. Focused on
+              performance, scalability, accessibility, and measurable business
+              impact including conversion, engagement, and page performance.
             </p>
             <p className="mt-4 leading-relaxed text-muted-foreground">
-              When I&apos;m not shipping product, I&apos;m contributing to open
-              source or writing about systems design.
+              Strong collaborator who translates product goals into scalable
+              frontend architecture, mentors engineers, and drives modern
+              engineering practices.
             </p>
           </div>
           <div>

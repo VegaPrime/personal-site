@@ -13,11 +13,11 @@ export default function Contact() {
           always open.
         </p>
         <div className="flex flex-wrap gap-3">
-          <a href="mailto:you@example.com" aria-label="Email" className={buttonVariants()}>
+          <a href="mailto:d.j.templeton7@gmail.com" aria-label="Email" className={buttonVariants()}>
             <Mail className="mr-2 h-4 w-4" /> Email me
           </a>
           <a
-            href="https://github.com/username"
+            href="https://github.com"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="GitHub"
@@ -26,7 +26,7 @@ export default function Contact() {
             <GitFork className="mr-2 h-4 w-4" /> GitHub
           </a>
           <a
-            href="https://linkedin.com/in/username"
+            href="https://www.linkedin.com/in/templetondavid/"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="LinkedIn"

@@ -42,9 +42,9 @@ export const resume: ResumeData = {
   ],
   education: [
     {
-      school: 'State University',
+      school: 'Georgia Institute of Technology',
       degree: 'B.S. Computer Science',
-      year: '2020',
+      year: '2018',
     },
   ],
 }
