@@ -37,4 +37,24 @@ describe('Projects', () => {
     const githubLink = screen.getByRole('link', { name: /git/i })
     expect(githubLink).toHaveAttribute('href', 'https://github.com/user/test')
   })
+
+  it('card wrapper has glitch-card class', () => {
+    const { container } = render(<Projects />)
+    const glitchCards = container.querySelectorAll('.glitch-card')
+    expect(glitchCards.length).toBeGreaterThan(0)
+  })
+
+  it('title span has glitch-title class and correct data-text attribute', () => {
+    const { container } = render(<Projects />)
+    const glitchTitles = container.querySelectorAll('.glitch-title')
+    expect(glitchTitles.length).toBeGreaterThan(0)
+    // Featured project title
+    const featuredTitle = container.querySelector('[data-text="■ Test Project"]')
+    expect(featuredTitle).toBeInTheDocument()
+    expect(featuredTitle).toHaveClass('glitch-title')
+    // Non-featured project title
+    const restTitle = container.querySelector('[data-text="■ Another Project"]')
+    expect(restTitle).toBeInTheDocument()
+    expect(restTitle).toHaveClass('glitch-title')
+  })
 })

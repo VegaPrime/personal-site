@@ -113,3 +113,115 @@
     scroll-behavior: smooth;
   }
 }
+
+/* ─────────────────────────────────────────────
+   Option B: Terminal Hacker animations
+───────────────────────────────────────────────*/
+
+/* Typewriter reveal keyframes */
+@keyframes hero-type-prompt { to { width: 9ch; } }
+@keyframes hero-type-name   { to { width: 24ch; } }
+@keyframes hero-type-role   { to { width: 34ch; } }
+
+/* Cursor blink / fade */
+@keyframes hero-cursor-blink { 50% { opacity: 0; } }
+@keyframes hero-cursor-fade  { to { opacity: 0; width: 0; margin: 0; } }
+
+/* Buttons appear */
+@keyframes hero-buttons-appear { to { opacity: 1; } }
+
+/* Typewriter spans — each starts hidden and expands one char at a time */
+.hero-typewriter-prompt {
+  overflow: hidden;
+  white-space: nowrap;
+  width: 0;
+  animation: hero-type-prompt 0.7s steps(9, end) 0.3s forwards;
+}
+.hero-typewriter-name {
+  overflow: hidden;
+  white-space: nowrap;
+  width: 0;
+  animation: hero-type-name 1.2s steps(24, end) 1.2s forwards;
+}
+.hero-typewriter-role {
+  overflow: hidden;
+  white-space: nowrap;
+  width: 0;
+  animation: hero-type-role 1.0s steps(34, end) 2.6s forwards;
+}
+
+/* Cursor blocks */
+.hero-cursor-blink,
+.hero-cursor-name,
+.hero-cursor-role {
+  display: inline-block;
+  width: 7px;
+  height: 1em;
+  background: var(--color-primary);
+  vertical-align: text-bottom;
+  margin-left: 2px;
+  flex-shrink: 0;
+}
+/* $ whoami — blinks forever */
+.hero-cursor-blink {
+  animation: hero-cursor-blink 0.8s step-end infinite;
+}
+/* Name cursor — blinks while typing, fades out at 2.4s (1.2s delay + 1.2s anim) */
+.hero-cursor-name {
+  animation: hero-cursor-blink 0.8s step-end infinite,
+             hero-cursor-fade 0.15s ease 2.4s forwards;
+}
+/* Role cursor — blinks while typing, fades out at 3.6s (2.6s delay + 1.0s anim) */
+.hero-cursor-role {
+  animation: hero-cursor-blink 0.8s step-end infinite,
+             hero-cursor-fade 0.15s ease 3.6s forwards;
+}
+
+/* Buttons row: invisible until typing is done */
+.hero-buttons-fade {
+  opacity: 0;
+  animation: hero-buttons-appear 0.5s ease 3.8s forwards;
+}
+
+/* ─────────────────────────────────────────────
+   Option B: Glitch hover — title only (Option A)
+───────────────────────────────────────────────*/
+
+@keyframes glitch-a1 {
+  0%   { transform: translate(-2px,  0px); clip-path: inset(0 0 70% 0); }
+  50%  { transform: translate( 2px,  1px); clip-path: inset(40% 0 30% 0); }
+  100% { transform: translate(-1px,  0px); clip-path: inset(70% 0 0 0); }
+}
+@keyframes glitch-a2 {
+  0%   { transform: translate( 2px,  0px); clip-path: inset(30% 0 50% 0); }
+  50%  { transform: translate(-2px, -1px); clip-path: inset(60% 0 10% 0); }
+  100% { transform: translate( 1px,  0px); clip-path: inset(10% 0 70% 0); }
+}
+
+.glitch-title {
+  position: relative;
+  display: inline-block;
+}
+.glitch-title::before,
+.glitch-title::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  pointer-events: none;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  white-space: nowrap;
+}
+.glitch-card:hover .glitch-title::before {
+  color: #ff00ff;
+  opacity: 0.75;
+  animation: glitch-a1 0.2s steps(2) infinite;
+}
+.glitch-card:hover .glitch-title::after {
+  color: #00ffff;
+  opacity: 0.75;
+  animation: glitch-a2 0.2s steps(2) infinite;
+}
