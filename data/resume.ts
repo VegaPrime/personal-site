@@ -24,50 +24,44 @@ export const resume: ResumeData = {
   "hasDocx": false,
   "experience": [
     {
-      "company": "Deloitte, Atlanta, GA",
+      "company": "Deloitte",
       "role": "Full Stack Web Developer",
       "period": "May 2023 – Jan 2026",
       "bullets": [
-        "Client: The Home Depot — Ecommerce Platform: Developed and optimized React/Next.js components for a high-traffic ecommerce platform serving millions of monthly users across product discovery and purchase journeys.",
-        "Built reusable product and content modules used across product listing, search, and checkout flows, reducing UI development time by 30%.",
-        "Improved Core Web Vitals and page load performance by implementing SSR, caching, and code-splitting, reducing load times by 25–30%.",
-        "Partnered with product, UX, and analytics teams to deliver customer-facing features that improved engagement and supported A/B testing and data-driven decisions.",
-        "Contributed to a scalable design system and helped modernize legacy frontend architecture into modular React/Next.js applications.",
-        "Delivered customer-facing modules for a government platform used by 10K+ users, collaborating with backend teams to define API contracts and optimize Next.js + Spring Boot integrations.",
-        "Developed and maintained large-scale React/Next.js applications supporting 50K+ users, implementing server-side caching and scalable REST APIs.",
-        "Led Angular-to-React migration initiatives, improving maintainability and standardizing reusable UI patterns across applications.",
-        "Engineered end-to-end features across React, Java, and Python microservices and optimized SQL queries and REST endpoints for large datasets.",
-        "Achieved 100% Section 508 accessibility compliance and improved page performance by 25% through collaboration with design and QA teams.",
-        "Mentored junior engineers, conducted 60+ code reviews, and implemented CI/CD pipelines that reduced deployment time by 40%."
+        "Built reusable product and content modules across search and checkout flows, reducing UI development time by 30%.",
+        "Improved Core Web Vitals by implementing SSR, caching, and code-splitting, reducing load times by 25–30%.",
+        "Delivered customer-facing modules for a government platform serving 10K+ users.",
+        "Mentored junior engineers, conducted 60+ code reviews, and reduced deployment time by 40% via CI/CD pipelines.",
+        "Achieved 100% Section 508 accessibility compliance and improved page performance by 25%."
       ]
     },
     {
-      "company": "Cognizant Softvision, Atlanta, Georgia",
+      "company": "Cognizant Softvision",
       "role": "Software Developer, Full Stack",
       "period": "Mar 2021 – Jan 2023",
       "bullets": [
-        "Applied Java, SOLID principles, and CLEAN architecture to design scalable, maintainable applications, reducing technical debt and boosting long-term reliability.",
-        "Developed SQL/NoSQL databases and 25+ RESTful APIs with Java/Spring Boot, improving query performance by 30% and accelerating feature delivery by 20%.",
-        "Constructed React applications with Context API, Redux, and React Router, enhancing UI responsiveness and improving user satisfaction by double.",
-        "Implemented and documented Node.js/Nest.js APIs with Swagger UI, reducing developer onboarding time by 40%."
+        "Developed 25+ RESTful APIs with Java/Spring Boot, improving query performance by 30%.",
+        "Accelerated feature delivery by 20% through optimized SQL/NoSQL database design.",
+        "Built React applications with Context API and Redux, doubling user satisfaction scores.",
+        "Implemented Node.js/Nest.js APIs with Swagger UI, reducing developer onboarding time by 40%."
       ]
     },
     {
-      "company": "Honeywell International Inc, Atlanta, Georgia",
+      "company": "Honeywell International Inc",
       "role": "Software Developer, Frontend Developer",
       "period": "May 2018 – Mar 2021",
       "bullets": [
-        "Built and maintained enterprise web apps with React, Redux, Java, and Spring Boot, improving scalability and system uptime.",
-        "Integrated secure APIs with OAuth2 SSO, Twilio 2FA, and SOAP/REST services, supporting 1000+ users.",
-        "Migrated legacy Angular apps to React/TypeScript, boosting performance by 40% and enabling reusable component libraries.",
-        "Helped optimize SQL/NoSQL databases (Postgres, MySQL, MongoDB, CosmosDB) to ensure 99% availability and faster queries for SaaS applications.",
-        "Conducted usability testing on prototypes, improving customer satisfaction scores by 20% and reducing post-launch revisions."
+        "Migrated legacy Angular apps to React/TypeScript, boosting performance by 40%.",
+        "Integrated secure APIs with OAuth2 SSO and Twilio 2FA, supporting 1000+ users.",
+        "Optimized SQL/NoSQL databases to ensure 99% availability for SaaS applications.",
+        "Conducted usability testing on prototypes, improving customer satisfaction scores by 20%.",
+        "Built and maintained enterprise web apps with React, Redux, Java, and Spring Boot."
       ]
     }
   ],
   "education": [
     {
-      "school": "Georgia Institute of Technology - Atlanta",
+      "school": "Georgia Institute of Technology",
       "degree": "Bachelor of Science: Computer Science",
       "year": "2018"
     }

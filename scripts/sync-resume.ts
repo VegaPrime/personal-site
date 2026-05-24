@@ -37,7 +37,7 @@ async function main() {
 {
   "experience": [
     {
-      "company": "string",
+      "company": "string (company name only, no location)",
       "role": "string",
       "period": "string (e.g. '2022 – Present')",
       "bullets": ["string"]
@@ -51,6 +51,13 @@ async function main() {
     }
   ]
 }
+
+Rules for bullets:
+- Maximum 5 bullets per role — pick the most impactful achievements
+- Each bullet must be a single concise sentence (under 20 words)
+- Lead with a strong action verb
+- Include a metric or outcome where the original has one (e.g. "reduced latency by 40%")
+- Do not combine multiple achievements into one bullet
 
 Resume text:
 ${text}`,

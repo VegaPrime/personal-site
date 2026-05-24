@@ -22,24 +22,26 @@ export default function Resume() {
             )}
           </div>
 
-          <h3 className="mb-6 text-lg font-semibold">Experience</h3>
-          <div className="space-y-8">
-            {resume.experience.map((exp, i) => (
-              <div key={exp.company}>
+          <h3 className="mb-4 text-lg font-semibold">Experience</h3>
+          <div className="space-y-4">
+            {resume.experience.map((exp) => (
+              <div
+                key={exp.company}
+                className="rounded-lg border border-border/50 bg-card/50 p-5 md:p-6"
+              >
                 <div className="mb-1 flex flex-wrap items-baseline justify-between gap-2">
                   <span className="font-semibold">{exp.company}</span>
                   <span className="font-mono text-xs text-muted-foreground">{exp.period}</span>
                 </div>
-                <p className="mb-3 text-sm text-primary">{exp.role}</p>
-                <ul className="space-y-1 text-sm text-muted-foreground">
+                <p className="mb-4 text-sm text-primary">{exp.role}</p>
+                <ul className="space-y-2 text-sm text-muted-foreground">
                   {exp.bullets.map((b) => (
                     <li key={b} className="flex gap-2">
-                      <span className="mt-1 text-primary">▸</span>
+                      <span className="mt-0.5 shrink-0 text-primary">▸</span>
                       <span>{b}</span>
                     </li>
                   ))}
                 </ul>
-                {i < resume.experience.length - 1 && <Separator className="mt-8" />}
               </div>
             ))}
           </div>
