@@ -23,25 +23,28 @@ export default function Resume() {
           </div>
 
           <h3 className="mb-6 text-lg font-semibold">Experience</h3>
-          <div className="space-y-8">
-            {resume.experience.map((exp, i) => (
-              <div key={exp.company}>
-                <div className="mb-1 flex flex-wrap items-baseline justify-between gap-2">
-                  <span className="font-semibold">{exp.company}</span>
-                  <span className="font-mono text-xs text-muted-foreground">{exp.period}</span>
+          <div className="relative ml-1">
+            <div className="absolute bottom-3 left-0 top-3 w-px bg-primary/30" />
+            <div className="space-y-10">
+              {resume.experience.map((exp) => (
+                <div key={exp.company} className="relative pl-8">
+                  <div className="absolute -left-0.75 top-1.75 h-1.75 w-1.75 rounded-full bg-primary" />
+                  <div className="mb-1 flex flex-wrap items-baseline justify-between gap-2">
+                    <span className="font-semibold">{exp.company}</span>
+                    <span className="font-mono text-xs text-muted-foreground">{exp.period}</span>
+                  </div>
+                  <p className="mb-3 text-sm text-primary">{exp.role}</p>
+                  <ul className="space-y-2 text-base text-foreground/80">
+                    {exp.bullets.map((b) => (
+                      <li key={b} className="flex gap-2">
+                        <span className="mt-1 shrink-0 text-primary">▸</span>
+                        <span>{b}</span>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
-                <p className="mb-3 text-sm text-primary">{exp.role}</p>
-                <ul className="space-y-1 text-sm text-muted-foreground">
-                  {exp.bullets.map((b) => (
-                    <li key={b} className="flex gap-2">
-                      <span className="mt-1 text-primary">▸</span>
-                      <span>{b}</span>
-                    </li>
-                  ))}
-                </ul>
-                {i < resume.experience.length - 1 && <Separator className="mt-8" />}
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
 
           {resume.education.length > 0 && (
