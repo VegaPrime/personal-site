@@ -35,6 +35,7 @@ async function main() {
         content: `Extract structured resume data from the text below. Return ONLY a valid JSON object — no markdown fences, no explanation — matching this exact shape:
 
 {
+  "skills": ["string"],
   "experience": [
     {
       "company": "string",
@@ -52,6 +53,8 @@ async function main() {
   ]
 }
 
+For "skills", extract a flat list of distinct technical skills (languages, frameworks, tools, platforms) mentioned anywhere in the resume. Each entry should be a short noun phrase (e.g. "React", "TypeScript", "PostgreSQL"). Do not include soft skills.
+
 Resume text:
 ${text}`,
       },
@@ -61,7 +64,7 @@ ${text}`,
   const block = message.content[0]
   if (block.type !== 'text') throw new Error('Unexpected Claude response type')
 
-  let parsed: { experience: unknown[]; education: unknown[] }
+  let parsed: { skills: unknown[]; experience: unknown[]; education: unknown[] }
   try {
     parsed = JSON.parse(block.text)
   } catch {
