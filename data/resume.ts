@@ -16,6 +16,7 @@ export type Education = {
 
 export type ResumeData = {
   hasDocx: boolean
+  skills: string[]
   experience: Experience[]
   education: Education[]
 }
