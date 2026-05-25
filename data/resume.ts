@@ -16,21 +16,82 @@ export type Education = {
 
 export type ResumeData = {
   hasDocx: boolean
+  skills: string[]
   experience: Experience[]
   education: Education[]
 }
 
 export const resume: ResumeData = {
   "hasDocx": false,
+  "skills": [
+    "React",
+    "Next.js",
+    "TypeScript",
+    "JavaScript",
+    "Java",
+    "Spring Boot",
+    "Node.js",
+    "Express",
+    "Nest.js",
+    "Redux",
+    "React Context",
+    "React Hooks",
+    "React Router",
+    "Angular",
+    "Python",
+    "HTML",
+    "CSS",
+    "SCSS",
+    "MongoDB",
+    "CosmosDB",
+    "PostgreSQL",
+    "MySQL",
+    "SQL",
+    "TypeORM",
+    "Mongoose",
+    "REST APIs",
+    "OAuth2",
+    "JWT",
+    "Swagger",
+    "OpenAPI",
+    "Azure",
+    "AWS",
+    "Git",
+    "GitHub",
+    "Bitbucket",
+    "Jira",
+    "Figma",
+    "React Testing Library",
+    "Enzyme",
+    "Jest",
+    "JUnit",
+    "Mockito",
+    "Webpack",
+    "NPM",
+    "Yarn",
+    "SSR",
+    "SSG",
+    "Code Splitting",
+    "Lazy Loading",
+    "Caching",
+    "Core Web Vitals",
+    "CI/CD",
+    "Twilio",
+    "SOAP",
+    "Claude",
+    "Cursor",
+    "GitHub Copilot"
+  ],
   "experience": [
     {
-      "company": "Deloitte, Atlanta, GA",
+      "company": "Deloitte (Client: The Home Depot / Government & Enterprise Platforms)",
       "role": "Full Stack Web Developer",
-      "period": "May 2023 – Jan 2026",
+      "period": "2023 – 2026",
       "bullets": [
-        "Client: The Home Depot — Ecommerce Platform: Developed and optimized React/Next.js components for a high-traffic ecommerce platform serving millions of monthly users across product discovery and purchase journeys.",
+        "Developed scalable full stack applications using React, Next.js, TypeScript, Java, and Spring Boot for a high-traffic ecommerce platform serving millions of monthly users.",
         "Built reusable product and content modules used across product listing, search, and checkout flows, reducing UI development time by 30%.",
         "Improved Core Web Vitals and page load performance by implementing SSR, caching, and code-splitting, reducing load times by 25–30%.",
+        "Developed end-to-end features across React frontends and Java microservices in distributed enterprise environments.",
         "Partnered with product, UX, and analytics teams to deliver customer-facing features that improved engagement and supported A/B testing and data-driven decisions.",
         "Contributed to a scalable design system and helped modernize legacy frontend architecture into modular React/Next.js applications.",
         "Delivered customer-facing modules for a government platform used by 10K+ users, collaborating with backend teams to define API contracts and optimize Next.js + Spring Boot integrations.",
@@ -42,33 +103,36 @@ export const resume: ResumeData = {
       ]
     },
     {
-      "company": "Cognizant Softvision, Atlanta, Georgia",
+      "company": "Cognizant Softvision",
       "role": "Software Developer, Full Stack",
-      "period": "Mar 2021 – Jan 2023",
+      "period": "2021 – 2023",
       "bullets": [
         "Applied Java, SOLID principles, and CLEAN architecture to design scalable, maintainable applications, reducing technical debt and boosting long-term reliability.",
+        "Developed enterprise full stack applications using React, Java, Spring Boot, Node.js, and cloud-native technologies.",
         "Developed SQL/NoSQL databases and 25+ RESTful APIs with Java/Spring Boot, improving query performance by 30% and accelerating feature delivery by 20%.",
         "Constructed React applications with Context API, Redux, and React Router, enhancing UI responsiveness and improving user satisfaction by double.",
+        "Developed and integrated backend services using Java/Spring Boot and Node.js/Nest.js across distributed enterprise platforms.",
         "Implemented and documented Node.js/Nest.js APIs with Swagger UI, reducing developer onboarding time by 40%."
       ]
     },
     {
-      "company": "Honeywell International Inc, Atlanta, Georgia",
+      "company": "Honeywell International Inc",
       "role": "Software Developer, Frontend Developer",
-      "period": "May 2018 – Mar 2021",
+      "period": "2018 – 2021",
       "bullets": [
         "Built and maintained enterprise web apps with React, Redux, Java, and Spring Boot, improving scalability and system uptime.",
         "Integrated secure APIs with OAuth2 SSO, Twilio 2FA, and SOAP/REST services, supporting 1000+ users.",
         "Migrated legacy Angular apps to React/TypeScript, boosting performance by 40% and enabling reusable component libraries.",
         "Helped optimize SQL/NoSQL databases (Postgres, MySQL, MongoDB, CosmosDB) to ensure 99% availability and faster queries for SaaS applications.",
+        "Developed full stack features across frontend applications and backend Java services supporting enterprise SaaS systems.",
         "Conducted usability testing on prototypes, improving customer satisfaction scores by 20% and reducing post-launch revisions."
       ]
     }
   ],
   "education": [
     {
-      "school": "Georgia Institute of Technology - Atlanta",
-      "degree": "Bachelor of Science: Computer Science",
+      "school": "Georgia Institute of Technology",
+      "degree": "Bachelor of Science in Computer Science",
       "year": "2018"
     }
   ]

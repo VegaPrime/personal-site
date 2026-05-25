@@ -1,11 +1,6 @@
 import { Badge } from '@/components/ui/badge'
 import { FadeIn } from '@/components/FadeIn'
-
-const skills = [
-  'TypeScript', 'React', 'Next.js', 'Node.js',
-  'Go', 'PostgreSQL', 'Redis', 'Docker',
-  'AWS', 'Tailwind CSS', 'GraphQL', 'Git',
-]
+import { resume } from '@/data/resume'
 
 export default function About() {
   return (
@@ -35,7 +30,7 @@ export default function About() {
                 Skills
               </h3>
               <div className="flex flex-wrap gap-2">
-                {skills.map((skill, index) => (
+                {resume.skills.map((skill, index) => (
                   <FadeIn key={skill} delay={index * 60}>
                     <Badge variant="outline" data-testid="skill-badge">
                       {skill}

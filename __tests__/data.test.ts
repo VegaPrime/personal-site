@@ -34,4 +34,19 @@ describe('data/resume', () => {
       expect(Array.isArray(e.bullets)).toBe(true)
     })
   })
+
+  it('has a skills array', () => {
+    expect(Array.isArray(resume.skills)).toBe(true)
+  })
+
+  it('has at least one skill', () => {
+    expect(resume.skills.length).toBeGreaterThan(0)
+  })
+
+  it('each skill is a non-empty string', () => {
+    resume.skills.forEach((s) => {
+      expect(typeof s).toBe('string')
+      expect(s.length).toBeGreaterThan(0)
+    })
+  })
 })
