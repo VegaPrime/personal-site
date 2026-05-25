@@ -10,7 +10,7 @@ export default function Contact() {
         <div className="mx-auto max-w-5xl">
           <p className="mb-6 font-mono text-xs text-primary">## ./contact</p>
           <h2 className="mb-4 text-2xl font-bold">Get in touch</h2>
-          <p className="mb-10 max-w-md text-muted-foreground">
+          <p className="mb-10 max-w-md text-base text-foreground/80">
             I&apos;m open to new opportunities and interesting projects. My inbox is
             always open.
           </p>

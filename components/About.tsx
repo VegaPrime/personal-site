@@ -16,7 +16,7 @@ export default function About() {
           <div className="grid gap-10 md:grid-cols-2">
             <div>
               <h2 className="mb-4 text-2xl font-bold">About me</h2>
-              <p className="leading-relaxed text-muted-foreground">
+              <p className="leading-relaxed text-base text-foreground/80">
                 Senior Frontend Engineer with 8+ years building high-traffic,
                 customer-facing web applications using React, Next.js, TypeScript,
                 and Node. Experienced delivering enterprise and ecommerce platforms
@@ -24,7 +24,7 @@ export default function About() {
                 performance, scalability, accessibility, and measurable business
                 impact including conversion, engagement, and page performance.
               </p>
-              <p className="mt-4 leading-relaxed text-muted-foreground">
+              <p className="mt-4 leading-relaxed text-base text-foreground/80">
                 Strong collaborator who translates product goals into scalable
                 frontend architecture, mentors engineers, and drives modern
                 engineering practices.
