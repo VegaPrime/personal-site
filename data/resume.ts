@@ -16,12 +16,14 @@ export type Education = {
 
 export type ResumeData = {
   hasDocx: boolean
+  skills: string[]
   experience: Experience[]
   education: Education[]
 }
 
 export const resume: ResumeData = {
   "hasDocx": false,
+  "skills": [],
   "experience": [
     {
       "company": "Deloitte, Atlanta, GA",
